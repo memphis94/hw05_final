@@ -11,7 +11,7 @@
   <article>
     {% load cache %}
     {% cache 20 index_page page_obj.number %}
-    {% include 'posts/includes/switcher.html' %}
+    {% include 'posts/includes/switcher.html' with index=True %}
     {% for post in page_obj %}
     <ul>
       <li>
